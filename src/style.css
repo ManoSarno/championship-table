@@ -34,6 +34,24 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+#currentRound {
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .container {
   display: flex;
   flex-direction: column;
