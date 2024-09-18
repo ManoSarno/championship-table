@@ -1,4 +1,5 @@
 import './style.css'
+import { rounds } from './rounds'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header>
@@ -23,3 +24,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
   </main>
 `
+
+rounds();
