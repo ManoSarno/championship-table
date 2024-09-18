@@ -34,26 +34,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 22px;
-  font-weight: 900;
-}
-
-h2 {
-  font-size: 26px;
-  font-weight: 400;
-}
-
-h3 {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-#currentRound, .team p {
-  font-size: 12px;
-  font-weight: 700;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -71,8 +51,23 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .rounds-component {
-  padding: 24px 21px;
+  padding: 24px 16px;
   border: 1px solid var(--border-primary);
   border-radius: 10px;
   width: 340px;
@@ -80,6 +75,11 @@ header {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+#currentRound {
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .nav-btn {
@@ -94,6 +94,7 @@ header {
   align-items: center;
   justify-content: center;
   transition: all 200ms ease-in-out;
+  flex-shrink: 0;
 }
 
 .nav-btn:disabled {
@@ -103,6 +104,10 @@ header {
 
 .nav-btn:not(:disabled):hover {
   transform: scale(1.1);
+}
+
+#nextRound svg {
+  transform: scaleX(-1);
 }
 
 .rounds-nav {
@@ -134,6 +139,8 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .team-away {
@@ -141,7 +148,7 @@ header {
 }
 
 .team img {
-  width: 32px;
+  width: 28px;
   height: auto;
 }
 
@@ -150,5 +157,28 @@ header {
   font-size: 15px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
+}
+
+.score svg {
+  color: #D1D1D1;
+  width: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 26px;
+  }
+  
+  .rounds-component {
+    padding: 24px 21px;
+  }
+  
+  .score {
+    gap: 14px;
+  }
+
+  .team img {
+    width: 32px;
+  }
 }

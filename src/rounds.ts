@@ -1,5 +1,6 @@
 import { SoccerRound, Game } from "./types";
 import { fetchSoccerResults } from "./fetchData";
+import xSVG from "./x";
 
 export async function rounds(): Promise<void> {
   // Array of SoccerRound objects fetched by API
@@ -40,7 +41,7 @@ export async function rounds(): Promise<void> {
           <img src="${game.team_home_id}.svg" alt="${game.team_home_name}" />
           <p>${game.team_home_name}</p>
         </div>
-        <div class="score">${game.team_home_score} x ${game.team_away_score}</div>
+        <div class="score">${game.team_home_score} ${xSVG} ${game.team_away_score}</div>
         <div class="team team-away">
           <img src="${game.team_away_id}.svg" alt="${game.team_away_name}" />
           <p>${game.team_away_name}</p>

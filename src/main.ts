@@ -1,5 +1,6 @@
 import './style.css'
 import { rounds } from './rounds'
+import arrowSVG from './arrow';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header>
@@ -10,14 +11,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="rounds-component">
       <div class="rounds-nav">
         <button id="prevRound" class="nav-btn" disabled>
-          <
+          ${arrowSVG}
         </button>
         <div class="rounds-info">
           <h3>Rodadas de Jogos</h3>
           <p id="currentRound">RODADA 1</p>
         </div>
         <button id="nextRound" class="nav-btn">
-          >
+          ${arrowSVG}
         </button>
       </div>
       <ul id="gamesList"></ul>
