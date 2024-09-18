@@ -33,3 +33,31 @@
   border: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 82px;
+  margin: auto 0;
+  padding: 50px 20px;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: 100%;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.rounds-component {
+  padding: 24px 21px;
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  width: 340px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
