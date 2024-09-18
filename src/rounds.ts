@@ -36,7 +36,15 @@ export async function rounds(): Promise<void> {
       listItem.classList.add("game-item");
       
       listItem.innerHTML = `
-        
+        <div class="team team-home">
+          <img src="${game.team_home_id}.svg" alt="${game.team_home_name}" />
+          <p>${game.team_home_name}</p>
+        </div>
+        <div class="score">${game.team_home_score} x ${game.team_away_score}</div>
+        <div class="team team-away">
+          <img src="${game.team_away_id}.svg" alt="${game.team_away_name}" />
+          <p>${game.team_away_name}</p>
+        </div>
       `;
 
       gamesList.appendChild(listItem);
